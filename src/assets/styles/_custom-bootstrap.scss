@@ -1,0 +1,48 @@
+/*
+* import needed bootstrap modules
+*/
+
+$primary:  #1B1464;;
+$secondary: #16da98;
+$orange: #ffab00;
+$contentBg: #f4f6f8;
+$danger: #ec4e44;
+$grey: #cad1db;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "primary": $primary,
+    "secondary": $secondary,
+    "warning": $orange,
+    "danger": $danger,
+  ),
+  $theme-colors
+);
+
+$zIndexNav: 100;
+$zIndexAside: 99;
+$navBarHeight: 4.375rem;
+$siteTemplateNavBarHeight: 5.625rem;
+
+:root {
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+  --danger: #{$danger};
+  --warning: #{$orange};
+  --contentBg: #{$contentBg};
+  --grey: #{$grey};
+  --lightGrey: #b2b9c6;
+  --zIndexNavBar: #{$zIndexNav};
+  --zIndexAside: #{$zIndexAside};
+  --navBarHeight: #{$navBarHeight};
+  --siteTemplateNavBarHeight: #{$siteTemplateNavBarHeight};
+}
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/tables";

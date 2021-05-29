@@ -1,0 +1,24 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+mat-sidenav {
+  min-width: 40%;
+  @include media-breakpoint-down(sm) {
+    width: 60%;
+  }
+}
+
+.app-content {
+  min-height: calc(100vh - var(--siteTemplateNavBarHeight));
+  background-color: var(--contentBg);
+  @media (min-width: 2560px) {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+::ng-deep {
+  .mat-drawer-container {
+    background-color: #fff;
+  }
+}

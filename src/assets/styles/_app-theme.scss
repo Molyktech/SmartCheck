@@ -1,0 +1,138 @@
+@import '@angular/material/_theming.scss';
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Helvetica, sans-serif',
+  $headline: mat-typography-level(24px, 32px, 500),
+  $body-1: mat-typography-level(14px, 20px, 400),
+);
+
+@include mat-base-typography($custom-typography);
+@include mat-checkbox-typography($custom-typography);
+@include angular-material-typography($custom-typography);
+@include mat-core($custom-typography);
+
+$mat-custom-app-secondary: (
+  50: #e6e6e9,
+  100: #bfc0c9,
+  200: #9597a5,
+  300: #6b6d80,
+  400: #4b4d65,
+  500: #2b2e4a,
+  600: #262943,
+  700: #20233a,
+  800: #1a1d32,
+  900: #101222,
+
+  A100: #646fff,
+  A200: #3140ff,
+  A400: #0012fd,
+  A700: #1B1464,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #ffffff,
+    A200: #ffffff,
+    A400: #ffffff,
+    A700: #ffffff,
+  ),
+);
+
+$mat-custom-app-accent: (
+  50: #eaf2ee,
+  100: #c9ded5,
+  200: #a6c8b9,
+  300: #82b29d,
+  400: #67a288,
+  500: #27AE60,
+  600: #45896b,
+  700: #3c7e60,
+  800: #337456,
+  900: #246243,
+  A100: #a5ffd0,
+  A200: #72ffb6,
+  A400: #3fff9c,
+  A700: #25ff8f,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$mat-custom-app-primary: (
+  50: #ecf3fa,
+  100: #d0e1f4,
+  200: #b1ceec,
+  300: #92bae4,
+  400: #7aabdf,
+  500: #639cd9,
+  600: #5b94d5,
+  700: #518acf,
+  800: #4780ca,
+  900: #356ec0,
+  A100: #ffffff,
+  A200: #d6e6ff,
+  A400: #a3c7ff,
+  A700: #8ab7ff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$smart-check-primary: mat-palette($mat-custom-app-primary);
+$smart-check-accent: mat-palette($mat-custom-app-accent);
+$smart-check-secondary: mat-palette($mat-custom-app-secondary);
+
+$smart-check-theme: mat-light-theme(
+  $smart-check-primary,
+  $smart-check-accent,
+  $smart-check-secondary
+);
+
+@mixin button-toggle-theme($smart-check-theme) {
+  $accent: map-get($smart-check-theme, accent);
+  $secondary: map-get($smart-check-theme, secondary);
+
+  .mat-button-toggle {
+    background-color: mat-color($accent, A100);
+  }
+
+  .mat-button-toggle-checked .mat-button-toggle-label-content {
+    color: mat-color($accent, A100);
+  }
+}
+
+@include angular-material-theme($smart-check-theme);
+@include button-toggle-theme($smart-check-theme);

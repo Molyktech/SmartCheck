@@ -1,0 +1,20 @@
+<app-dashboard-toolbar></app-dashboard-toolbar>
+<div class="app-body">
+  <mat-sidenav-container [hasBackdrop]="true">
+    <mat-sidenav #sidenav position="end" [mode]="'over'">
+      <app-dashboard-mobile-nav
+        (closeMenu)="handleClose($event)"
+        [navList]="navList"
+      ></app-dashboard-mobile-nav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <section>
+        <app-dashboard-main-nav
+          (openMenu)="handleOpen($event)"
+          [navList]="navList"
+        ></app-dashboard-main-nav>
+        <div class="app-content"><router-outlet></router-outlet></div>
+      </section>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
