@@ -1,7 +1,7 @@
 export class MenuItems {
   name: string;
   link: string;
-  active = true;
+  isActive = true;
   index?: number;
   icon?: string;
   children?: MenuItems[];

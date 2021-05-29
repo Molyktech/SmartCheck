@@ -88,7 +88,7 @@ $mat-custom-app-primary: (
   600: #5b94d5,
   700: #518acf,
   800: #4780ca,
-  900: #356ec0,
+  900: #49D3FF,
   A100: #ffffff,
   A200: #d6e6ff,
   A400: #a3c7ff,
@@ -111,9 +111,9 @@ $mat-custom-app-primary: (
   ),
 );
 
-$smart-check-primary: mat-palette($mat-custom-app-primary);
+$smart-check-primary: mat-palette($mat-custom-app-primary,900);
 $smart-check-accent: mat-palette($mat-custom-app-accent);
-$smart-check-secondary: mat-palette($mat-custom-app-secondary);
+$smart-check-secondary: mat-palette($mat-custom-app-secondary, A700);
 
 $smart-check-theme: mat-light-theme(
   $smart-check-primary,

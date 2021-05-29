@@ -1,15 +1,24 @@
-<nav mat-tab-nav-bar>
-  <a
-    mat-tab-link
-    *ngFor="let link of navList"
-    [routerLink]="link.link"
-    routerLinkActive
-    #rla="routerLinkActive"
-    [active]="rla.isActive"
-  >
-    <span>
-      <mat-icon class="example-tab-icon">{{ link.icon }}</mat-icon>
-    </span>
-    {{ link?.name }}
-  </a>
-</nav>
+<div class="d-flex justify-content-between align-items-center nav-wrapper">
+  <button mat-icon-button (click)="open()" class="d-lg-none">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <nav #tabs mat-tab-nav-bar class="d-none d-md-block">
+    <a
+      mat-tab-link
+      *ngFor="let link of navList"
+      [routerLink]="link.link"
+      routerLinkActive
+      #rla="routerLinkActive"
+      [active]="rla.isActive"
+    >
+      <span>
+        <mat-icon class="example-tab-icon">{{ link.icon }}</mat-icon>
+      </span>
+      {{ link?.name }}
+    </a>
+  </nav>
+
+  <button mat-flat-button color="primary" class="primary-button">
+    Check Health Status
+  </button>
+</div>

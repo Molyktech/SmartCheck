@@ -3,3 +3,9 @@
 @import "assets/styles/_custom-bootstrap";
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+button{
+  &.primary-button{
+    text-emphasis: center;
+    color: var(--primary) !important;
+  }
+}

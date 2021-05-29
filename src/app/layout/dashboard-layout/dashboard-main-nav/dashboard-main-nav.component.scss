@@ -1,7 +1,24 @@
 :host{
-  nav{
-    a{
-      text-decoration: none;
+
+  .nav-wrapper{
+    padding: 0 1rem 0  0.75rem ;
+    nav{
+      a{
+        text-decoration: none;
+        color: var(--primary);
+
+      }
     }
   }
+}
+
+::ng-deep{
+  .mat-tab-link {
+    opacity: 1 !important;
+  };
+  .mat-tab-nav-bar, .mat-tab-header {
+    border-bottom:none !important;
+  }
+
+
 }
