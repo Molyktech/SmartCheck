@@ -1,0 +1,59 @@
+:host {
+  display: flex;
+  width: 100%;
+
+  form {
+    width: 50%;
+    @media screen and (min-width: 1028px) {
+      width: 25%;
+    }
+    @media screen and (max-width:480px){
+      width: 100%;
+
+    }
+    @media screen and (max-width: 320px) {
+      width: 100%;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .table {
+
+    border-spacing: 0 20px;
+  }
+  .table th{
+    padding: 1rem 0;
+    vertical-align: middle !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    text-align: center;
+
+  }
+  .table td {
+    text-align: center;
+  }
+
+  mat-card {
+    width: 100%;
+
+    table {
+      width: 100%;
+      font-size: 14px;
+
+      tr {
+        &.table-header {
+          background: #f4f6f8;
+          border-radius: 4px;
+        }
+        td {
+          border-bottom: none;
+          text-transform: capitalize;
+          padding: 1rem 0.5rem;
+        }
+      }
+
+    }
+  }
+}
+

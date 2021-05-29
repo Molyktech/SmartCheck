@@ -1,0 +1,27 @@
+<mat-card class="mat-elevation-z0 w-100 d-flex flex-wrap">
+  <mat-card-title class="w-100 py-3 pl-0 d-flex justify-content-between">
+    {{ statsData?.title }}
+  </mat-card-title>
+  <mat-card-content class="w-100">
+    <div class="d-flex justify-content-between">
+      <div
+        class="stats-button-container"
+        *ngFor="let stats of statsData?.stats | keyvalue"
+      >
+        <button
+          class="round-button"
+          [ngStyle]="{
+            background: colorMap[stats?.key]?.background,
+            borderColor: colorMap[stats?.key]?.borderColor,
+            borderStyle: 'solid',
+            color: colorMap[stats?.key]?.color
+          }"
+          aria-label="Example icon button with a delete icon"
+        >
+          {{ stats.value }}
+        </button>
+        <p class="font-weight-bold mt-3">{{ stats.key | titlecase }}</p>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

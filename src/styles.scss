@@ -1,9 +1,10 @@
 @import "assets/styles/_app-theme";
 @import "assets/styles/_app-variables";
 @import "assets/styles/_custom-bootstrap";
-html, body { height: 100%; }
+html, body { height: 100%;  }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 button{
+  outline: none;
   &.primary-button{
     text-emphasis: center;
     color: var(--primary) !important;

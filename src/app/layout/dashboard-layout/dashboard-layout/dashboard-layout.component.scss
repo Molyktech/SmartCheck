@@ -12,6 +12,8 @@ mat-sidenav {
 .app-content {
   min-height: calc(100vh - var(--siteTemplateNavBarHeight));
   background-color: var(--contentBg);
+  color: #262626;
+  padding: 3rem;
   @media (min-width: 2560px) {
     width: 70%;
     margin: 0 auto;

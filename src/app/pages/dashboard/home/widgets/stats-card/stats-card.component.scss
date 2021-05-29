@@ -1,0 +1,19 @@
+@import '../count-card/count-card.component.scss';
+:host{
+ mat-card-content{
+  .stats-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    button{
+      border-radius: 50%;
+      width:3rem ;
+      height:3rem ;
+      background-color: white;
+    }
+  }
+
+ }
+}
